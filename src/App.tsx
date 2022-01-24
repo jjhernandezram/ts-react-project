@@ -1,9 +1,12 @@
-import { Navigation } from "./router/Navigation";
+import { Suspense } from 'react';
+import { Navigation } from './routes/Navigation';
 
 function App() {
   return (
     <>
-      <Navigation />
+      <Suspense fallback={<>Loading</>}>
+        <Navigation />
+      </Suspense>
     </>
   );
 }
