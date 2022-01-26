@@ -8,6 +8,7 @@ export { ProductButtons } from './ProductButtons';
 export { ProductImg } from './ProductImg';
 export { ProductTitle } from './ProductTitle';
 
+
 const ProductCard: ProductCardHOCProps = Object.assign(ProductCardHOC, {
   Title: ProductTitle,
   Image: ProductImg,
