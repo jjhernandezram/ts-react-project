@@ -24,7 +24,7 @@ export const ProductButtons = ({ className }: Props) => {
       <button
         className={styles.buttonAdd}
         onClick={() => {
-          increaseCounterBy(1);
+          increaseCounterBy(+1);
         }}
       >
         +
