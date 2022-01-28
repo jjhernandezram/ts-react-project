@@ -18,8 +18,10 @@ export const ShoppingPage = () => {
             product={product}
             className='bg-dark'
             key={product.id}
-            value={shoppingCart[Number(product.id)]?.count || 0}
-            onChange={onProductCountChange}
+            initialValues={{
+              count: 1,
+              maxValue: product.inStock,
+            }}
           >
             <ProductCard.Image className='custom-image' />
             <ProductCard.Title className='text-white' />

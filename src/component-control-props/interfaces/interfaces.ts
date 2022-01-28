@@ -7,6 +7,7 @@ export interface Product {
   id: string;
   title: string;
   img?: string;
+  inStock: number;
 }
 
 export interface ProductCardContextProps {
@@ -29,4 +30,9 @@ export interface onChangeArgs {
 
 export interface ProductInCart extends Product {
   count: number;
+}
+
+export interface InitialValues {
+  count: number;
+  maxValue: number;
 }
