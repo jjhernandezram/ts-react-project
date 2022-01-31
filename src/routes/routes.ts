@@ -1,5 +1,5 @@
-import { lazy, LazyExoticComponent } from 'react';
-import { NoLazy } from '../lazyload/pages/NoLazy';
+import { LazyExoticComponent } from 'react';
+import { FormikAbstraction, FormikBasic, FormikComponents, FormikYup, RegisterPage } from '../forms/pages';
 
 type JSXComponent = () => JSX.Element;
 
@@ -10,20 +10,35 @@ interface Routes {
   name: string;
 }
 
-const LazyLayout = lazy(() => import(/* webpackChunkName:"LazyLayout" */ '../lazyload/layout/LazyLayout'));
-
-
 export const routes: Routes[] = [
   {
-    to: '/lazyload/',
-    path: '/lazyload/*',
-    Component: LazyLayout,
-    name: 'LazyLayout - Dash',
+    to: '/register',
+    path: 'register',
+    Component: RegisterPage,
+    name: 'Register Page',
   },
   {
-    to: '/no-lazy',
-    path: 'no-lazy',
-    Component: NoLazy,
-    name: 'No-Lazy Component',
+    to: '/formik',
+    path: 'formik',
+    Component: FormikBasic,
+    name: 'Formik Basic',
+  },
+  {
+    to: '/formikyup',
+    path: 'formikyup',
+    Component: FormikYup,
+    name: 'Formik Yup',
+  },
+  {
+    to: '/formikcomponents',
+    path: 'formikcomponents',
+    Component: FormikComponents,
+    name: 'Formik Components',
+  },
+  {
+    to: '/formik-abstraction',
+    path: 'formik-abstraction',
+    Component: FormikAbstraction,
+    name: 'Formik Abstraction',
   },
 ];

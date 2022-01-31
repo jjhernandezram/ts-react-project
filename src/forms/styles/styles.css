@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+input, select {
+  margin-top: 5px;
+  outline: none;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+span, .error-message {
+  color: red;
+}
+
+.has-error {
+  border: 1px solid red;
+}
+
+label {
+  margin-top:10px
+}
